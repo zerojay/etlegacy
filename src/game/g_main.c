@@ -2254,7 +2254,10 @@ void G_ShutdownGame(int restart)
 	}
 	else
 	{
-		G_Printf("^2ShutdownOmniBot\n");
+		if (g_OmniBotEnable.integer)
+		{
+			G_Printf("^2ShutdownOmniBot\n");
+		}
 	}
 #endif
 
