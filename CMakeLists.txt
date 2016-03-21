@@ -445,7 +445,7 @@ endif(BUNDLED_LIBS OR BUNDLED_SDL OR BUNDLED_CURL AND FEATURE_CURL OR BUNDLED_JP
 #-----------------------------------------------------------------
 if(BUILD_CLIENT)
 	if(GLES)
-		list(APPEND RENDERER_LIBRARIES -lEGL -lGLES_CM)
+		list(APPEND RENDERER_LIBRARIES -lEGL -lGLESv1_CM)
 		include_directories(SYSTEM /mnt/utmp/codeblocks/usr/include/gles)
 	else()
 		find_package(OpenGL REQUIRED)
